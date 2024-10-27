@@ -6,10 +6,11 @@
 .
 ├── README.md
 ├── docker-compose.yaml
+├── .env
 ├── dags/
 │   └── population_pipeline.py
 └── outputs/
-    └── .gitkeep
+    └── .gitignore
 ```
 
 ## Requisitos previos
@@ -75,15 +76,19 @@ docker-compose down -v
 
 ## Resolución de problemas comunes
 
-1. Si el puerto 8080 está ocupado:
+1. Si no aparece la contraseña:
+   - Esperar un poco :)
+   - Filtrar la salida con `docker-compose logs airflow | grep admin`
+
+2. Si el puerto 8080 está ocupado:
    - Modificar el puerto en docker-compose.yaml: "8081:8080"
 
-2. Si no aparece el DAG en la interfaz:
+3. Si no aparece el DAG en la interfaz:
    - Verificar la sintaxis del archivo Python
    - Revisar los logs: `docker-compose logs airflow`
 
-3. Si no se pueden escribir los outputs:
+4. Si no se pueden escribir los outputs:
    - Verificar permisos en el directorio outputs
    - Comprobar la configuración de volúmenes en docker-compose.yaml
-
+   - Regenerar el fichero de usuario: `echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env` en el raíz del proyecto.
 
