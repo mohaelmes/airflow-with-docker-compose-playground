@@ -29,6 +29,9 @@ docker-compose up -d
 docker-compose logs airflow
 ```
 
+![How To](assets/snapshot_pwd_in_docker-compose_output.png)
+
+
 3. Acceder a la interfaz web:
 - URL: http://localhost:8080
 - Usuario: admin
