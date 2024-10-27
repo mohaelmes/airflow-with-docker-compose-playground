@@ -34,7 +34,7 @@ docker-compose logs airflow
 
 
 3. Acceder a la interfaz web:
-- URL: http://localhost:8080
+- URL: http://localhost:8001
 - Usuario: admin
 - Contraseña: buscar en los logs la línea que contiene "admin:password"
 
@@ -80,8 +80,8 @@ docker-compose down -v
    - Esperar un poco :)
    - Filtrar la salida con `docker-compose logs airflow | grep admin`
 
-2. Si el puerto 8080 está ocupado:
-   - Modificar el puerto en docker-compose.yaml: "8081:8080"
+2. Si el puerto 8081 está ocupado:
+   - Modificar el puerto en docker-compose.yaml: "XXXX:8080"
 
 3. Si no aparece el DAG en la interfaz:
    - Verificar la sintaxis del archivo Python
