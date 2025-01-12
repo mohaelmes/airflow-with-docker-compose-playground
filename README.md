@@ -39,7 +39,8 @@ docker-compose logs airflow
 - Usuario: admin
 - Contraseña: buscar en los logs la línea que contiene "admin:password"
 
-![image](https://github.com/user-attachments/assets/66fb5719-f2d9-4a69-ac88-6c24ef0e18a2)
+![image](https://github.com/user-attachments/assets/a8a8091f-52c0-41b6-b713-fe13c3aa1e2e)
+
 
 ## Verificar resultados
 
