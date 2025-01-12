@@ -24,6 +24,7 @@
 ```bash
 docker-compose up -d
 ```
+![image](https://github.com/user-attachments/assets/4dd17088-d5a6-4e5d-a3b8-f573e40f72fe)
 
 2. Ver los logs (incluye la contraseña de admin):
 ```bash
@@ -37,6 +38,8 @@ docker-compose logs airflow
 - URL: http://localhost:8001
 - Usuario: admin
 - Contraseña: buscar en los logs la línea que contiene "admin:password"
+
+![image](https://github.com/user-attachments/assets/66fb5719-f2d9-4a69-ac88-6c24ef0e18a2)
 
 ## Verificar resultados
 
